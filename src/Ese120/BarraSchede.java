@@ -16,21 +16,17 @@
  */
 package Ese120;
 
-
-import javax.swing.BoxLayout;
-import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
 
 /**
  *
  * @author Mattia Morelli
  */
-public class FinestraPrincipale extends JFrame  {
+public class BarraSchede extends JTabbedPane{
     
-   public FinestraPrincipale() {
-    
-    this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-    this.add(PanelLogo);  //pannello per il logo
-    this.add(barraSchede);  //tabbedPane
-    
-    }
+    //pannello
+    //nome scheda 
+    //icona scheda
+
+    //aggiungere Scarpe, Completi, Accessori, Carrello
 }

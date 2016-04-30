@@ -16,21 +16,13 @@
  */
 package Ese120;
 
-
-import javax.swing.BoxLayout;
-import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author Mattia Morelli
  */
-public class FinestraPrincipale extends JFrame  {
+public class PanelLogo extends JPanel{
     
-   public FinestraPrincipale() {
-    
-    this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-    this.add(PanelLogo);  //pannello per il logo
-    this.add(barraSchede);  //tabbedPane
-    
-    }
+    //logo, nome azienda
 }
