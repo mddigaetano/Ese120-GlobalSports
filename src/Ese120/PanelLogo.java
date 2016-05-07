@@ -24,5 +24,7 @@ import javax.swing.JPanel;
  */
 public class PanelLogo extends JPanel{
     
-    //logo, nome azienda
+    JPanel logo = new JPanel();//logo 
+    private String Nome_Azienda; //nome azienda
+
 }

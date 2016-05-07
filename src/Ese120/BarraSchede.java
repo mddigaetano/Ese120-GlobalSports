@@ -16,6 +16,8 @@
  */
 package Ese120;
 
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
 /**
@@ -24,9 +26,11 @@ import javax.swing.JTabbedPane;
  */
 public class BarraSchede extends JTabbedPane{
     
-    //pannello
-    //nome scheda 
-    //icona scheda
+    JPanel schede = new JPanel(); //pannello
+    private String Scheda;  //nome scheda 
+
+
+     //icona scheda
 
     //aggiungere Scarpe, Completi, Accessori, Carrello
 }
