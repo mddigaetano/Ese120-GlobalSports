@@ -25,6 +25,7 @@ import javax.swing.JTabbedPane;
  *
  * @author Mattia Morelli
  */
+
 public class BarraSchede extends JTabbedPane {
 
     PanelGriglia schede; //pannello
