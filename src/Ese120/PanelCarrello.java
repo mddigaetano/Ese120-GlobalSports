@@ -21,11 +21,14 @@ import javax.swing.*;
 
 public class PanelCarrello extends JPanel{
     
+    private JButton bottone;
+    
    public PanelCarrello(){
        
        this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
-       
-       
+       bottone=new JButton("Acquista");
+       this.add(bottone);
+       this.add(this);
    }
     
     

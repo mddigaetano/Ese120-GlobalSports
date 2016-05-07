@@ -34,7 +34,7 @@ public class PanelArticolo extends JPanel {
         this.add(this.nome);
         this.add(this.img);
         this.add(this.prezzo);
-        
+        this.add(this);
     }
 
 }
