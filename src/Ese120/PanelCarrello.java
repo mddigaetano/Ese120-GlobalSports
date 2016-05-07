@@ -16,7 +16,18 @@
  */
 package Ese120;
 
+import javax.swing.*;
 
-public class PanelCarrello {
+
+public class PanelCarrello extends JPanel{
+    
+   public PanelCarrello(){
+       
+       this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
+       
+       
+   }
+    
+    
     
 }

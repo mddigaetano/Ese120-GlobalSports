@@ -25,20 +25,17 @@ import javax.swing.*;
  */
 public class PanelGriglia extends JScrollPane{
     
+    private PanelArticolo articolo;
     public PanelGriglia(String scheda){
         
         this.setLayout(new GridLayout(0,3));
-        this.add(PanelArticolo());
-        this.add(PanelArticolo());
-        this.add(PanelArticolo());
-        this.add(PanelArticolo());
-        this.add(PanelArticolo());
-        this.add(PanelArticolo());
-        this.add(PanelArticolo());
-        this.add(PanelArticolo());
-        this.add(PanelArticolo());
-        this.add(PanelArticolo());
+        CSVParser prodotti=new CSVParser("./resources/prodotti/"+scheda+".csv");
         
+        for(int i=0;i<prodotti.getSize();i++){
+            
+            articolo=new PanelArticolo(prodotti.getElement("immagine",i),prodotti.getElement("nome",i),prodotti.getElement("prezzo",i));
+            
+        }
         
     }
     

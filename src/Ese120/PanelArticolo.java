@@ -19,18 +19,22 @@ package Ese120;
 import java.awt.*;
 import javax.swing.*;
 
-
 public class PanelArticolo extends JPanel {
-    
-    public PanelArticolo(String img,String nome,String prezzo){
-        
-        this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
-        this.setSize(110,110);
-        this.add(new JLabel(new ImageIcon(new ImageIcon("./resources/Images/"+img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH))));//immagine
-        this.add(new JLabel(nome));//nome
-        this.add(new JLabel("€"+prezzo));//prezzo
+
+    private JLabel nome, prezzo, img;
+
+    public PanelArticolo(String img, String nome, String prezzo) {
+        this.nome = new JLabel(nome);
+        this.prezzo = new JLabel(prezzo);
+        this.img = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/" + img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)));
+
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.setSize(110, 110);
+
+        this.add(this.nome);
+        this.add(this.img);
+        this.add(this.prezzo);
         
     }
-    
-    
+
 }
