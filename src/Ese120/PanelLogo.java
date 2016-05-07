@@ -16,6 +16,8 @@
  */
 package Ese120;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -24,7 +26,13 @@ import javax.swing.JPanel;
  */
 public class PanelLogo extends JPanel{
     
-    JPanel logo = new JPanel();//logo 
-    private String Nome_Azienda; //nome azienda
-
+    private JLabel logo = new JLabel();//logo 
+    private JLabel Nome_Azienda = new JLabel(); //nome azienda
+    
+    public PanelLogo() {
+      
+    Nome_Azienda = new JLabel("Global Sports");    
+    logo = new JLabel(new ImageIcon("./resources/Images/logo.png"));    
+    
+    }
 }

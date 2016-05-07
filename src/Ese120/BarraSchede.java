@@ -16,6 +16,7 @@
  */
 package Ese120;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
@@ -26,11 +27,22 @@ import javax.swing.JTabbedPane;
  */
 public class BarraSchede extends JTabbedPane{
     
-    JPanel schede = new JPanel(); //pannello
-    private String Scheda;  //nome scheda 
+    PanelGriglia schede; //pannello
 
 
-     //icona scheda
+    public BarraSchede(){
+    
+//aggiunta Scarpe, Completi, Accessori, Carrello 
+       
+        schede = new PanelGriglia("scarpe");
+        this.add("Scarpe",new ImageIcon(""),schede);
+        schede = new PanelGriglia("magliette");
+        this.add("Magliette",new ImageIcon(""),schede);
+        schede = new PanelGriglia("accessori");
+        this.add("Accessori",new ImageIcon(""),schede);
+        schede = new PanelCarrello();
+        this.add("Carrello",new ImageIcon(""),schede);
 
-    //aggiungere Scarpe, Completi, Accessori, Carrello
+
+}
 }
