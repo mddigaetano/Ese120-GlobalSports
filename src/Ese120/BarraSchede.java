@@ -25,24 +25,21 @@ import javax.swing.JTabbedPane;
  *
  * @author Mattia Morelli
  */
-public class BarraSchede extends JTabbedPane{
-    
+public class BarraSchede extends JTabbedPane {
+
     PanelGriglia schede; //pannello
 
+    public BarraSchede() {
 
-    public BarraSchede(){
-    
 //aggiunta Scarpe, Completi, Accessori, Carrello 
-       
         schede = new PanelGriglia("scarpe");
-        this.add("Scarpe",new ImageIcon(""),schede);
+        this.add("Scarpe", new ImageIcon(""), schede);
         schede = new PanelGriglia("magliette");
-        this.add("Magliette",new ImageIcon(""),schede);
+        this.add("Magliette", new ImageIcon(""), schede);
         schede = new PanelGriglia("accessori");
-        this.add("Accessori",new ImageIcon(""),schede);
+        this.add("Accessori", new ImageIcon(""), schede);
         schede = new PanelCarrello();
-        this.add("Carrello",new ImageIcon(""),schede);
+        this.add("Carrello", new ImageIcon(""), schede);
 
-
-}
+    }
 }

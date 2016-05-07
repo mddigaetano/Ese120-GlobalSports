@@ -24,15 +24,15 @@ import javax.swing.JPanel;
  *
  * @author Mattia Morelli
  */
-public class PanelLogo extends JPanel{
-    
+public class PanelLogo extends JPanel {
+
     private JLabel logo = new JLabel();//logo 
     private JLabel Nome_Azienda = new JLabel(); //nome azienda
-    
+
     public PanelLogo() {
-      
-    Nome_Azienda = new JLabel("Global Sports");    
-    logo = new JLabel(new ImageIcon("./resources/Images/logo.png"));    
-    
+
+        Nome_Azienda = new JLabel("Global Sports");
+        logo = new JLabel(new ImageIcon("./resources/Images/logo.png"));
+
     }
 }

@@ -28,11 +28,12 @@ public class FinestraPrincipale extends JFrame {
 
     PanelLogo logo;
     BarraSchede schede;
+
     public FinestraPrincipale() {
 
         logo = new PanelLogo();
         schede = new BarraSchede();
-        
+
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.add(logo);  //pannello per il logo
         this.add(schede);  //tabbedPane
