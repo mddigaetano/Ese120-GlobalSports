@@ -16,7 +16,9 @@
  */
 package Ese120;
 
+import CSVParser.CSVParser;
 import java.awt.*;
+import java.io.IOException;
 import javax.swing.*;
 
 /**
@@ -26,7 +28,7 @@ import javax.swing.*;
 public class PanelGriglia extends JScrollPane{
     
     private PanelArticolo articolo;
-    public PanelGriglia(String scheda){
+    public PanelGriglia(String scheda) throws IOException{
         
         this.setLayout(new GridLayout(0,3));
         CSVParser prodotti=new CSVParser("./resources/prodotti/"+scheda+".csv");

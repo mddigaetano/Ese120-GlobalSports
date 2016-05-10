@@ -16,9 +16,8 @@
  */
 package Ese120;
 
+import java.io.IOException;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
 /**
@@ -29,18 +28,18 @@ import javax.swing.JTabbedPane;
 public class BarraSchede extends JTabbedPane {
 
     PanelGriglia schede; //pannello
+    PanelCarrello carrello;
 
-    public BarraSchede() {
+    public BarraSchede() throws IOException {
 
 //aggiunta Scarpe, Completi, Accessori, Carrello 
         schede = new PanelGriglia("scarpe");
-        this.add("Scarpe", new ImageIcon(""), schede);
+        this.addTab("Scarpe", new ImageIcon(""), schede);
         schede = new PanelGriglia("magliette");
-        this.add("Magliette", new ImageIcon(""), schede);
+        this.addTab("Magliette", new ImageIcon(""), schede);
         schede = new PanelGriglia("accessori");
-        this.add("Accessori", new ImageIcon(""), schede);
-        schede = new PanelCarrello();
-        this.add("Carrello", new ImageIcon(""), schede);
-
+        this.addTab("Accessori", new ImageIcon(""), schede);
+        carrello = new PanelCarrello();
+        this.addTab("Carrello", new ImageIcon(""), carrello);
     }
 }

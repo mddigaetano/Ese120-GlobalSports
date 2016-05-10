@@ -65,5 +65,9 @@ public class CSVParser {
     public String[] getHeader() {
         return header;
     }
+
+    public int getSize() {
+        return rows.size();
+    }
     
 }

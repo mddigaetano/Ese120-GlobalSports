@@ -16,9 +16,9 @@
  */
 package Ese120;
 
+import java.io.IOException;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 /**
  *
@@ -29,7 +29,7 @@ public class FinestraPrincipale extends JFrame {
     PanelLogo logo;
     BarraSchede schede;
 
-    public FinestraPrincipale() {
+    public FinestraPrincipale() throws IOException {
 
         logo = new PanelLogo();
         schede = new BarraSchede();
