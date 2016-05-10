@@ -16,21 +16,27 @@
  */
 package Ese120;
 
-
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author Mattia Morelli
  */
-public class FinestraPrincipale extends JFrame  {
-    
-   public FinestraPrincipale() {
-    
-    this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-    this.add(PanelLogo);  //pannello per il logo
-    this.add(barraSchede);  //tabbedPane
-    
+public class FinestraPrincipale extends JFrame {
+
+    PanelLogo logo;
+    BarraSchede schede;
+
+    public FinestraPrincipale() {
+
+        logo = new PanelLogo();
+        schede = new BarraSchede();
+
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.add(logo);  //pannello per il logo
+        this.add(schede);  //tabbedPane
+
     }
 }
