@@ -28,7 +28,6 @@ public class PanelCarrello extends JPanel{
        this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
        bottone=new JButton("Acquista");
        this.add(bottone);
-       this.add(this);
    }
     
     

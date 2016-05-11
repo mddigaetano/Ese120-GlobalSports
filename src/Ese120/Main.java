@@ -16,6 +16,9 @@
  */
 package Ese120;
 
+import java.io.IOException;
+import javax.swing.JFrame;
+
 /**
  *
  * @author Amedeo
@@ -24,9 +27,14 @@ public class Main {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws IOException {
+        FinestraPrincipale gui = new FinestraPrincipale();
+        
+        gui.setVisible(true);
+        gui.pack();
+        gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
 }

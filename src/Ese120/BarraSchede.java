@@ -16,6 +16,7 @@
  */
 package Ese120;
 
+import java.awt.Image;
 import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JTabbedPane;
@@ -33,13 +34,13 @@ public class BarraSchede extends JTabbedPane {
     public BarraSchede() throws IOException {
 
 //aggiunta Scarpe, Completi, Accessori, Carrello 
-        schede = new PanelGriglia("scarpe");
-        this.addTab("Scarpe", new ImageIcon(""), schede);
-        schede = new PanelGriglia("magliette");
-        this.addTab("Magliette", new ImageIcon(""), schede);
-        schede = new PanelGriglia("accessori");
-        this.addTab("Accessori", new ImageIcon(""), schede);
+        schede = new PanelGriglia("Scarpe");
+        this.addTab("Scarpe", new ImageIcon(new ImageIcon("./resources/Images/scarpe.png").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)), schede);
+        schede = new PanelGriglia("Completi");
+        this.addTab("Completi", new ImageIcon(new ImageIcon("./resources/Images/completi.jpg").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)), schede);
+        schede = new PanelGriglia("Accessori");
+        this.addTab("Accessori", new ImageIcon(new ImageIcon("./resources/Images/accessori.jpg").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)), schede);
         carrello = new PanelCarrello();
-        this.addTab("Carrello", new ImageIcon(""), carrello);
+        this.addTab("Carrello", new ImageIcon(new ImageIcon("./resources/Images/carrello.jpg").getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)), carrello);
     }
 }

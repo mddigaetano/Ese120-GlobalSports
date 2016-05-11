@@ -26,13 +26,15 @@ import javax.swing.JPanel;
  */
 public class PanelLogo extends JPanel {
 
-    private JLabel logo = new JLabel();//logo 
-    private JLabel Nome_Azienda = new JLabel(); //nome azienda
+    private JLabel logo;//logo 
+    private JLabel Nome_Azienda; //nome azienda
 
     public PanelLogo() {
 
         Nome_Azienda = new JLabel("Global Sports");
         logo = new JLabel(new ImageIcon("./resources/Images/logo.png"));
-
+        
+        this.add(this.Nome_Azienda);
+        this.add(this.logo);
     }
 }

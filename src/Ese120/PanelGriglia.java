@@ -25,18 +25,19 @@ import javax.swing.*;
  *
  * @author Studenti
  */
-public class PanelGriglia extends JScrollPane{
+public class PanelGriglia extends JPanel{
     
     private PanelArticolo articolo;
+    
     public PanelGriglia(String scheda) throws IOException{
         
         this.setLayout(new GridLayout(0,3));
-        CSVParser prodotti=new CSVParser("./resources/prodotti/"+scheda+".csv");
+        
+        CSVParser prodotti=new CSVParser("./resources/Products/"+scheda+".csv");
         
         for(int i=0;i<prodotti.getSize();i++){
-            
             articolo=new PanelArticolo(prodotti.getElement("immagine",i),prodotti.getElement("nome",i),prodotti.getElement("prezzo",i));
-            
+            this.add(articolo);
         }
         
     }

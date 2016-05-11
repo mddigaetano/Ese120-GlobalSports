@@ -30,9 +30,11 @@ public class CSVParser {
     
     private final String[] header;
     
-    private ArrayList rows;
-    
+    private ArrayList<String[]> rows;
+ 
     public CSVParser(String filename) throws FileNotFoundException, IOException{
+        
+        rows = new ArrayList();
         
         BufferedReader br = new BufferedReader(new FileReader(filename));
         String temp;
@@ -40,7 +42,9 @@ public class CSVParser {
         this.header = br.readLine().split(";");
         
         while((temp = br.readLine()) != null){
-            this.rows.add(temp.split(";"));
+            String[] boh = temp.split(";");
+            this.rows.add(boh);
+            
         }
         
     }
