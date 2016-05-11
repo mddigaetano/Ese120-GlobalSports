@@ -33,7 +33,7 @@ public class Main {
         FinestraPrincipale gui = new FinestraPrincipale();
         
         gui.setVisible(true);
-        gui.setSize(700, 600);
+        gui.setSize(530, 400);
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
