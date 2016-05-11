@@ -16,6 +16,7 @@
  */
 package Ese120;
 
+import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -32,8 +33,8 @@ public class PanelLogo extends JPanel {
     public PanelLogo() {
 
         Nome_Azienda = new JLabel("Global Sports");
-        logo = new JLabel(new ImageIcon("./resources/Images/logo.png"));
-        
+        logo = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/logo.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
+        //new ImageIcon("./resources/Images/logo.png")
         this.add(this.Nome_Azienda);
         this.add(this.logo);
     }
