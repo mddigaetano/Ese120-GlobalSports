@@ -30,7 +30,7 @@ public class CSVParser {
     
     private final String[] header;
     
-    private ArrayList<String[]> rows;
+    private final ArrayList<String[]> rows;
  
     public CSVParser(String filename) throws FileNotFoundException, IOException{
         

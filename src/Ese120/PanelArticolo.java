@@ -21,19 +21,37 @@ import javax.swing.*;
 
 public class PanelArticolo extends JPanel {
 
-    private JLabel nome, prezzo, img;
+    private final JLabel nome, prezzo, img;
 
     public PanelArticolo(String img, String nome, String prezzo) {
         this.nome = new JLabel(nome);
+        this.nome.setAlignmentX(Component.CENTER_ALIGNMENT);
+        
         this.prezzo = new JLabel("€"+prezzo);
+        this.prezzo.setAlignmentX(Component.CENTER_ALIGNMENT);
+        
         this.img = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/"+img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)));
+        this.img.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-//        this.setSize(110, 110);
 
-        this.add(this.nome);
         this.add(this.img);
+        this.add(this.nome);
         this.add(this.prezzo);
+        
+        this.addMouseListener(new Listener());
+    }
+
+    public JLabel getNome() {
+        return nome;
+    }
+
+    public JLabel getPrezzo() {
+        return prezzo;
+    }
+
+    public JLabel getImg() {
+        return img;
     }
 
 }

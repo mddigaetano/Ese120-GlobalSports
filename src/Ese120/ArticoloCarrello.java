@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Studenti
+ * Copyright (C) 2016 Amedeo
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,26 +16,34 @@
  */
 package Ese120;
 
-import java.awt.Image;
-import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
  *
- * @author Mattia Morelli
+ * @author Amedeo
  */
-public class PanelLogo extends JPanel {
-
-    private final JLabel logo;//logo 
-    private final JLabel Nome_Azienda; //nome azienda
-
-    public PanelLogo() {
-
-        Nome_Azienda = new JLabel("Global Sports");
-        logo = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/logo.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
-        //new ImageIcon("./resources/Images/logo.png")
-        this.add(this.Nome_Azienda);
-        this.add(this.logo);
+public class ArticoloCarrello extends JPanel{
+    
+    private final JLabel img;
+    private final JLabel info;
+    private final JLabel quantita;
+    private final JButton elimina;
+    
+    public ArticoloCarrello(PanelArticolo prodotto, int quantita){
+        
+        img = prodotto.getImg();
+        info = new JLabel("<html>"+prodotto.getNome().getText()+"<br>"+prodotto.getPrezzo().getText()+"</html>");
+        this.quantita = new JLabel("x"+quantita);
+        elimina = new JButton("Elimina");
+        elimina.setActionCommand("elimina");
+        
+        this.add(elimina);
+        this.add(img);
+        this.add(info);
+        this.add(this.quantita);
     }
+    
+    
 }

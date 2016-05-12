@@ -16,20 +16,25 @@
  */
 package Ese120;
 
+import java.awt.Component;
 import javax.swing.*;
 
 
 public class PanelCarrello extends JPanel{
     
-    private JButton bottone;
+   private final JButton bottone;
     
    public PanelCarrello(){
        
        this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
+       
        bottone=new JButton("Acquista");
+       bottone.setAlignmentX(Component.CENTER_ALIGNMENT);
+       bottone.setActionCommand("acquista");
+       
        this.add(bottone);
    }
     
     
-    
+   
 }

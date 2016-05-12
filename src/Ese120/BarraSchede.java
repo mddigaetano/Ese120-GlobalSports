@@ -16,9 +16,11 @@
  */
 package Ese120;
 
+import java.awt.Dimension;
 import java.awt.Image;
 import java.io.IOException;
 import javax.swing.ImageIcon;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 
 /**
@@ -28,19 +30,35 @@ import javax.swing.JTabbedPane;
 
 public class BarraSchede extends JTabbedPane {
 
-    PanelGriglia schede; //pannello
-    PanelCarrello carrello;
+    private PanelGriglia schede; //pannello
+    private JScrollPane scroll;
+    private final PanelCarrello carrello;
 
     public BarraSchede() throws IOException {
 
 //aggiunta Scarpe, Completi, Accessori, Carrello 
         schede = new PanelGriglia("Scarpe");
-        this.addTab("Scarpe", new ImageIcon(new ImageIcon("./resources/Images/scarpe.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), schede);
+        scroll = new JScrollPane(schede);
+        scroll.setPreferredSize(new Dimension(500,150));
+        this.addTab("Scarpe", new ImageIcon(new ImageIcon("./resources/Images/scarpe.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), scroll);
+        
         schede = new PanelGriglia("Completi");
-        this.addTab("Completi", new ImageIcon(new ImageIcon("./resources/Images/completi.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), schede);
+        scroll = new JScrollPane(schede);
+        scroll.setPreferredSize(new Dimension(500,150));
+        this.addTab("Completi", new ImageIcon(new ImageIcon("./resources/Images/completi.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), scroll);
+        
         schede = new PanelGriglia("Accessori");
-        this.addTab("Accessori", new ImageIcon(new ImageIcon("./resources/Images/accessori.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), schede);
+        scroll = new JScrollPane(schede);
+        scroll.setPreferredSize(new Dimension(500,150));
+        this.addTab("Accessori", new ImageIcon(new ImageIcon("./resources/Images/accessori.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), scroll);
+        
         carrello = new PanelCarrello();
-        this.addTab("Carrello", new ImageIcon(new ImageIcon("./resources/Images/carrello.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), carrello);
+        scroll = new JScrollPane(carrello);
+        scroll.setPreferredSize(new Dimension(500,150));
+        this.addTab("Carrello", new ImageIcon(new ImageIcon("./resources/Images/carrello.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), scroll);
+    }
+
+    public PanelCarrello getCarrello() {
+        return carrello;
     }
 }
