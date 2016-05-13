@@ -39,21 +39,25 @@ public class BarraSchede extends JTabbedPane {
 //aggiunta Scarpe, Completi, Accessori, Carrello 
         schede = new PanelGriglia("Scarpe");
         scroll = new JScrollPane(schede);
+        scroll.getVerticalScrollBar().setUnitIncrement(10);
         scroll.setPreferredSize(new Dimension(500,150));
         this.addTab("Scarpe", new ImageIcon(new ImageIcon("./resources/Images/scarpe.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), scroll);
         
         schede = new PanelGriglia("Completi");
         scroll = new JScrollPane(schede);
+        scroll.getVerticalScrollBar().setUnitIncrement(10);
         scroll.setPreferredSize(new Dimension(500,150));
         this.addTab("Completi", new ImageIcon(new ImageIcon("./resources/Images/completi.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), scroll);
         
         schede = new PanelGriglia("Accessori");
         scroll = new JScrollPane(schede);
+        scroll.getVerticalScrollBar().setUnitIncrement(10);
         scroll.setPreferredSize(new Dimension(500,150));
         this.addTab("Accessori", new ImageIcon(new ImageIcon("./resources/Images/accessori.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), scroll);
         
         carrello = new PanelCarrello();
         scroll = new JScrollPane(carrello);
+        scroll.getVerticalScrollBar().setUnitIncrement(10);
         scroll.setPreferredSize(new Dimension(500,150));
         this.addTab("Carrello", new ImageIcon(new ImageIcon("./resources/Images/carrello.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), scroll);
     }

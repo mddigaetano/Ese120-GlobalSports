@@ -63,17 +63,20 @@ public class Main implements ActionListener, MouseListener{
                 
                 shop = (PanelCarrello)(((JButton)(e.getSource())).getParent());
                 Component[] articoli = shop.getComponents();
-                
-                float totale = 0;
-                for(int i = 1; i < articoli.length; i++){
-                    ArticoloCarrello temp = (ArticoloCarrello)(articoli[i]);
-                    totale += temp.articolo.prezzo * temp.numero ;
+                if(articoli.length > 1){
+                    float totale = 0;
+                    for(int i = 1; i < articoli.length; i++){
+                        ArticoloCarrello temp = (ArticoloCarrello)(articoli[i]);
+                        totale += temp.articolo.prezzo * temp.numero ;
+                    }
+
+                    int scelta = JOptionPane.showConfirmDialog(null, "<html>Il prezzo degli articoli selezionati e': €"+totale+"<br>Confermi l'acquisto?</html>", "Conferma Acquisto", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+
+                    if(scelta == JOptionPane.OK_OPTION){
+                        JOptionPane.showMessageDialog(null, "Grazie per aver scelto GLOBAL SPORTS","Acquisto Completato", JOptionPane.INFORMATION_MESSAGE);
+                        System.exit(0);
+                    }
                 }
-                
-                int scelta = JOptionPane.showConfirmDialog(null, "<html>Il prezzo degli articoli selezionati e': €"+totale+"<br>Confermi l'acquisto?</html>", "Conferma Acquisto", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
-                
-                if(scelta == JOptionPane.OK_OPTION)
-                    System.exit(0);
                 break;
         }
     }
