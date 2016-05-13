@@ -16,13 +16,17 @@
  */
 package Ese120;
 
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JViewport;
 
 /**
  *
@@ -50,7 +54,10 @@ public class Main implements ActionListener, MouseListener{
         
         switch(action){
             case "elimina":
-                
+                ArticoloCarrello daEliminare = (ArticoloCarrello)((JButton)e.getSource()).getParent();
+                PanelCarrello shop = (PanelCarrello)daEliminare.getParent();
+                shop.remove(daEliminare);
+                ((JViewport)(shop.getParent())).setView(shop);
                 break;
             case "acquista":
                 

@@ -57,8 +57,4 @@ public class BarraSchede extends JTabbedPane {
         scroll.setPreferredSize(new Dimension(500,150));
         this.addTab("Carrello", new ImageIcon(new ImageIcon("./resources/Images/carrello.jpg").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)), scroll);
     }
-
-    public PanelCarrello getCarrello() {
-        return carrello;
-    }
 }
