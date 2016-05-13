@@ -50,6 +50,7 @@ public class ArticoloCarrello extends JPanel{
         this.add(img);
         this.add(info);
         this.add(this.quantita);
+        this.setAlignmentX(Component.LEFT_ALIGNMENT);
     }
     
     

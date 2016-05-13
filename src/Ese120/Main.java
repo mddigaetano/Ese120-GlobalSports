@@ -16,7 +16,6 @@
  */
 package Ese120;
 
-import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -25,7 +24,6 @@ import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
 import javax.swing.JViewport;
 
 /**
@@ -71,10 +69,11 @@ public class Main implements ActionListener, MouseListener{
         
         Integer argomenti[] = {1,2,3,4,5,6,7,8,9,10};
         
-        int scelta = (int)JOptionPane.showInputDialog(null, "Quanti articoli vuoi aggiungere al carrello?", "Seleziona Quantita'", JOptionPane.INFORMATION_MESSAGE, null, argomenti, argomenti[0]);
-//        int quantita = Integer.parseInt(scelta);
-        
-        gui.schede.carrello.add(new ArticoloCarrello(clicked, scelta));
+        Object scelta = JOptionPane.showInputDialog(null, "Quanti articoli vuoi aggiungere al carrello?", "Seleziona Quantita'", JOptionPane.INFORMATION_MESSAGE, null, argomenti, argomenti[0]);
+        if(scelta != null){
+            int quantita = (int)scelta;
+            gui.schede.carrello.add(new ArticoloCarrello(clicked, quantita));
+        }
     }
 
     @Override
