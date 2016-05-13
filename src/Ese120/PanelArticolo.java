@@ -21,30 +21,22 @@ import javax.swing.*;
 
 public class PanelArticolo extends JPanel {
 
-    protected final String nome, prezzo, img;
+    protected final String nome, img;
+    protected final float prezzo;
 
     public PanelArticolo(String img, String nome, String prezzo) {
         this.nome = nome;
-        this.prezzo = prezzo;
+        this.prezzo = Float.parseFloat(prezzo);
         this.img = img;
         
         JLabel name = new JLabel(this.nome);
         name.setAlignmentX(Component.CENTER_ALIGNMENT);
         
-//        this.nome = new JLabel(this.nome);
-//        this.nome.setAlignmentX(Component.CENTER_ALIGNMENT);
-        
         JLabel price = new JLabel("€"+this.prezzo);
         price.setAlignmentX(Component.CENTER_ALIGNMENT);
         
-//        this.prezzo = new JLabel("€"+prezzo);
-//        this.prezzo.setAlignmentX(Component.CENTER_ALIGNMENT);
-        
         JLabel image = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/"+this.img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)));
         image.setAlignmentX(Component.CENTER_ALIGNMENT);
-        
-//        this.img = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/"+img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)));
-//        this.img.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
@@ -54,17 +46,5 @@ public class PanelArticolo extends JPanel {
         
         this.addMouseListener(new Main());
     }
-
-//    public JLabel getNome() {
-//        return nome;
-//    }
-//
-//    public JLabel getPrezzo() {
-//        return prezzo;
-//    }
-//
-//    public JLabel getImg() {
-//        return img;
-//    }
 
 }

@@ -16,6 +16,7 @@
  */
 package Ese120;
 
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -49,16 +50,30 @@ public class Main implements ActionListener, MouseListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
+        PanelCarrello shop;
         
         switch(action){
             case "elimina":
                 ArticoloCarrello daEliminare = (ArticoloCarrello)((JButton)e.getSource()).getParent();
-                PanelCarrello shop = (PanelCarrello)daEliminare.getParent();
+                shop = (PanelCarrello)daEliminare.getParent();
                 shop.remove(daEliminare);
                 ((JViewport)(shop.getParent())).setView(shop);
                 break;
             case "acquista":
                 
+                shop = (PanelCarrello)(((JButton)(e.getSource())).getParent());
+                Component[] articoli = shop.getComponents();
+                
+                float totale = 0;
+                for(int i = 1; i < articoli.length; i++){
+                    ArticoloCarrello temp = (ArticoloCarrello)(articoli[i]);
+                    totale += temp.articolo.prezzo * temp.numero ;
+                }
+                
+                int scelta = JOptionPane.showConfirmDialog(null, "<html>Il prezzo degli articoli selezionati e': €"+totale+"<br>Confermi l'acquisto?</html>", "Conferma Acquisto", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+                
+                if(scelta == JOptionPane.OK_OPTION)
+                    System.exit(0);
                 break;
         }
     }

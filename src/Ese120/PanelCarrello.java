@@ -16,7 +16,6 @@
  */
 package Ese120;
 
-import java.awt.Component;
 import javax.swing.*;
 
 
@@ -28,9 +27,10 @@ public class PanelCarrello extends JPanel{
        
        this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
        
-       bottone=new JButton("Acquista");
-       bottone.setAlignmentX(Component.CENTER_ALIGNMENT);
+       bottone = new JButton("Acquista");
+       bottone.setAlignmentX(CENTER_ALIGNMENT);
        bottone.setActionCommand("acquista");
+       bottone.addActionListener(new Main());
        
        this.add(bottone);
    }
