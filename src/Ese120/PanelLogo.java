@@ -32,8 +32,8 @@ public class PanelLogo extends JPanel {
 
     public PanelLogo() {
 
-        Nome_Azienda = new JLabel("Global Sports");
-        logo = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/logo.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
+        Nome_Azienda = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/title_official.png").getImage().getScaledInstance(300, 100, Image.SCALE_SMOOTH)));
+        logo = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/logo_official.png").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH)));
         this.add(this.Nome_Azienda);
         this.add(this.logo);
     }
