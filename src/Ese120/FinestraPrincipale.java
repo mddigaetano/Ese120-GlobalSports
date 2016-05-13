@@ -27,9 +27,9 @@ import javax.swing.JPanel;
  */
 public class FinestraPrincipale extends JFrame {
 
-    JPanel pannello;
-    PanelLogo logo;
-    BarraSchede schede;
+    protected JPanel pannello;
+    private final PanelLogo logo;
+    protected BarraSchede schede;
 
     public FinestraPrincipale() throws IOException {
 

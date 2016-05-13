@@ -31,8 +31,8 @@ import javax.swing.JTabbedPane;
 public class BarraSchede extends JTabbedPane {
 
     private PanelGriglia schede; //pannello
-    private JScrollPane scroll;
-    private final PanelCarrello carrello;
+    protected JScrollPane scroll;
+    protected final PanelCarrello carrello;
 
     public BarraSchede() throws IOException {
 

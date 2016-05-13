@@ -16,25 +16,77 @@
  */
 package Ese120;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.IOException;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Amedeo
  */
-public class Main {
+public class Main implements ActionListener, MouseListener{
 
+    private static FinestraPrincipale gui;
+    
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
-        FinestraPrincipale gui = new FinestraPrincipale();
+        gui = new FinestraPrincipale();
         
         gui.setVisible(true);
         gui.setSize(530, 400);
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String action = e.getActionCommand();
+        
+        switch(action){
+            case "elimina":
+                
+                break;
+            case "acquista":
+                
+                break;
+        }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        PanelArticolo clicked = (PanelArticolo)e.getSource();
+        
+        Integer argomenti[] = {1,2,3,4,5,6,7,8,9,10};
+        
+        int scelta = (int)JOptionPane.showInputDialog(null, "Quanti articoli vuoi aggiungere al carrello?", "Seleziona Quantita'", JOptionPane.INFORMATION_MESSAGE, null, argomenti, argomenti[0]);
+//        int quantita = Integer.parseInt(scelta);
+        
+        gui.schede.carrello.add(new ArticoloCarrello(clicked, scelta));
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        
+    }
 }

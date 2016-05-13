@@ -21,37 +21,50 @@ import javax.swing.*;
 
 public class PanelArticolo extends JPanel {
 
-    private final JLabel nome, prezzo, img;
+    protected final String nome, prezzo, img;
 
     public PanelArticolo(String img, String nome, String prezzo) {
-        this.nome = new JLabel(nome);
-        this.nome.setAlignmentX(Component.CENTER_ALIGNMENT);
+        this.nome = nome;
+        this.prezzo = prezzo;
+        this.img = img;
         
-        this.prezzo = new JLabel("€"+prezzo);
-        this.prezzo.setAlignmentX(Component.CENTER_ALIGNMENT);
+        JLabel name = new JLabel(this.nome);
+        name.setAlignmentX(Component.CENTER_ALIGNMENT);
         
-        this.img = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/"+img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)));
-        this.img.setAlignmentX(Component.CENTER_ALIGNMENT);
+//        this.nome = new JLabel(this.nome);
+//        this.nome.setAlignmentX(Component.CENTER_ALIGNMENT);
+        
+        JLabel price = new JLabel("€"+this.prezzo);
+        price.setAlignmentX(Component.CENTER_ALIGNMENT);
+        
+//        this.prezzo = new JLabel("€"+prezzo);
+//        this.prezzo.setAlignmentX(Component.CENTER_ALIGNMENT);
+        
+        JLabel image = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/"+this.img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)));
+        image.setAlignmentX(Component.CENTER_ALIGNMENT);
+        
+//        this.img = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/"+img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)));
+//        this.img.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-        this.add(this.img);
-        this.add(this.nome);
-        this.add(this.prezzo);
+        this.add(image);
+        this.add(name);
+        this.add(price);
         
-        this.addMouseListener(new Listener());
+        this.addMouseListener(new Main());
     }
 
-    public JLabel getNome() {
-        return nome;
-    }
-
-    public JLabel getPrezzo() {
-        return prezzo;
-    }
-
-    public JLabel getImg() {
-        return img;
-    }
+//    public JLabel getNome() {
+//        return nome;
+//    }
+//
+//    public JLabel getPrezzo() {
+//        return prezzo;
+//    }
+//
+//    public JLabel getImg() {
+//        return img;
+//    }
 
 }

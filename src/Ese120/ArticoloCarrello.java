@@ -16,6 +16,8 @@
  */
 package Ese120;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -33,8 +35,8 @@ public class ArticoloCarrello extends JPanel{
     
     public ArticoloCarrello(PanelArticolo prodotto, int quantita){
         
-        img = prodotto.getImg();
-        info = new JLabel("<html>"+prodotto.getNome().getText()+"<br>"+prodotto.getPrezzo().getText()+"</html>");
+        img = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/"+prodotto.img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)));;
+        info = new JLabel("<html>"+prodotto.nome+"<br>€"+prodotto.prezzo+"</html>");
         this.quantita = new JLabel("x"+quantita);
         elimina = new JButton("Elimina");
         elimina.setActionCommand("elimina");
