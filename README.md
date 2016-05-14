@@ -8,7 +8,7 @@ Scrivere la documentazione (es.pag.307):<br>
 		Analisi del problema<br>
 		<ul>
 			<li>Introdurre il progetto;</li>
-			<li>pecificare come si è scelto di impostare l’interfaccia;</li>
+			<li>specificare come si è scelto di impostare l’interfaccia;</li>
 			<li>tracciare UML;</li>
 			<li>esporre ipotesi aggiuntive.</li>
 		</ul>
