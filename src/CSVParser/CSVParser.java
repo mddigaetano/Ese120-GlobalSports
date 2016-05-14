@@ -23,9 +23,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- *
+ *questa classe permette di leggere il csv
+ * 
  * @author Amedeo
  */
+
+
 public class CSVParser {
     
     private final String[] header;
@@ -48,10 +51,24 @@ public class CSVParser {
         }
         
     }
-    
+    /**
+     * 
+     * @param element è il nome del campo
+     * @param row è l'elemento da prendere
+     * @return 
+     */
     public String getElement(String element, int row){
         return (((String[])(this.rows.get(row)))[CSVParser.indexOf(element, header)]);
     }
+    
+    /**
+     * 
+     * @param str è la stringa da ricercare
+     * @param list è la lista su cui cercare la stringa
+     * @return indice elemento richiesto
+     * 
+     * 
+     */
     
     public static int indexOf(String str, String[] list){
         int index = -1;
@@ -66,10 +83,18 @@ public class CSVParser {
         return index;
     }
 
+        /**
+         * 
+         * @return intastazione csv
+         */
     public String[] getHeader() {
         return header;
     }
 
+        /**
+         * 
+         * @return entry csv
+         */
     public int getSize() {
         return rows.size();
     }

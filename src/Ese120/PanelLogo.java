@@ -22,7 +22,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- *
+ *classe riservata alla visualizzazione del logo e del nome dell'azienda
+ * 
  * @author Mattia Morelli
  */
 public class PanelLogo extends JPanel {
@@ -30,6 +31,11 @@ public class PanelLogo extends JPanel {
     private final JLabel logo;//logo 
     private final JLabel Nome_Azienda; //nome azienda
 
+    
+    /**
+     * il costruttore istanzia le immagini del logo e del nome dell'azienda
+     * 
+     */
     public PanelLogo() {
 
         Nome_Azienda = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/title_official.png").getImage().getScaledInstance(300, 100, Image.SCALE_SMOOTH)));

@@ -23,10 +23,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- *
+ *questa classe visualizza all'interno del carrello l'articolo selezionato
+ * 
  * @author Amedeo
  */
 public class ArticoloCarrello extends JPanel{
+    
     
     private final JLabel img;
     private final JLabel info;
@@ -35,10 +37,18 @@ public class ArticoloCarrello extends JPanel{
     protected PanelArticolo articolo;
     protected int numero;
     
+    /**
+     * il costruttore istanzia l'articolo e il bottone relativo all'eliminazione
+     * 
+     * @param prodotto articolo scelto
+     * @param quantita numero dell'articolo scelto da acquistare
+     */
+    
     public ArticoloCarrello(PanelArticolo prodotto, int quantita){
         
         articolo = prodotto;
         numero = quantita;
+        
         
         this.img = new JLabel(new ImageIcon(new ImageIcon("./resources/Images/"+prodotto.img).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH)));
         this.info = new JLabel("<html>"+prodotto.nome+"<br>€"+prodotto.prezzo+"</html>");

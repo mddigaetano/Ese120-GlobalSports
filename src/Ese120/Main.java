@@ -28,7 +28,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JViewport;
 
 /**
- *
+ *questa classe implementa l'ActionListener ed il MouseListener
+ * 
  * @author Amedeo
  */
 public class Main implements ActionListener, MouseListener{
@@ -47,6 +48,11 @@ public class Main implements ActionListener, MouseListener{
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    /**
+     * metodo che permette di eliminare o acquistare un articolo in base al click sull'apposito bottone
+     * 
+     * @param e evento
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
@@ -81,6 +87,11 @@ public class Main implements ActionListener, MouseListener{
         }
     }
 
+    /**
+     * metodo che permette di aggiungere l'articolo scelto al carrello tramite un click sull'immagine del prodotto
+     * 
+     * @param e evento
+     */
     @Override
     public void mouseClicked(MouseEvent e) {
         PanelArticolo clicked = (PanelArticolo)e.getSource();

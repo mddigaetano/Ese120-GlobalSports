@@ -22,15 +22,23 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- *
+ *questa classe contiene tutti i vari pannelli presenti nell'interfaccia
+ * 
  * @author Mattia Morelli
  */
+
 public class FinestraPrincipale extends JFrame {
 
     protected JPanel pannello;
     private final PanelLogo logo;
     protected BarraSchede schede;
 
+    /**
+     * il costruttore istanzia il pannello, il logo e la tabbedPane
+     * 
+     * @throws IOException 
+     */
+    
     public FinestraPrincipale() throws IOException {
 
         pannello = new JPanel();

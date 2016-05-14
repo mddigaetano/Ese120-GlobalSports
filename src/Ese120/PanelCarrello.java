@@ -18,11 +18,18 @@ package Ese120;
 
 import javax.swing.*;
 
-
+/**
+ * classe riservata all'acquisto degli articoli precedentemente aggiunti a questo pannello
+ * 
+ * @author Andre Sette
+ */
 public class PanelCarrello extends JPanel{
     
    private final JButton bottone;
-    
+   
+   /**
+    * il costruttore imposta a BoxLayout il pannello e istanzia i bottoni per l'acquisto degli articoli
+    */
    public PanelCarrello(){
        
        this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));

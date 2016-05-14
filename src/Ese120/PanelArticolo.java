@@ -18,12 +18,31 @@ package Ese120;
 
 import java.awt.*;
 import javax.swing.*;
-
+/**
+ * questa classe permette la visualizzazione di un pannello con immagine nome e prezzo di un determinato articolo
+ * 
+ * @author Andre Sette
+ */
 public class PanelArticolo extends JPanel {
 
+    /**
+     *  nome dell'articolo
+     *  percorso dell'immagine dell'articolo
+     */
     protected final String nome, img;
+    /**
+     * prezzo dell'articolo
+     */
     protected final float prezzo;
 
+    /**
+     * il costruttore instanzia l'oggetto passandogli i tre parametri img,nome,prezzo
+     * 
+     * @param img percorso dell'immagine dell'articolo
+     * @param nome nome dell'articolo
+     * @param prezzo prezzo dell'articolo
+     */
+    
     public PanelArticolo(String img, String nome, String prezzo) {
         this.nome = nome;
         this.prezzo = Float.parseFloat(prezzo);

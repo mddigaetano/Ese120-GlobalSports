@@ -22,12 +22,20 @@ import java.io.IOException;
 import javax.swing.*;
 
 /**
- *
- * @author Studenti
+ * classe che permette di scegliere la disposizione in modo ordinato degli articoli
+ * 
+ * @author Andre Sette
  */
 public class PanelGriglia extends JPanel{
     
     private PanelArticolo articolo;
+    
+   /**
+    * il costruttore preleva tutti i csv passategli come parametri, e ogni singolo PanelGriglia contiene un tipo di articolo prelevato dal csv corrispondente
+    * 
+    * @param scheda spazio riservato alla memorizzazione di tutti gli articoli
+    * @throws IOException 
+    */
     
     public PanelGriglia(String scheda) throws IOException{
         

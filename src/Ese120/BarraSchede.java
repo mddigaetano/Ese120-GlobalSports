@@ -24,7 +24,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 
 /**
- *
+ *questa classe istanzia le etichette dei cataloghi dei prodotti acquistabili e con un click su un catalogo si viene indirizzati all'apposito pannello
+ * 
  * @author Mattia Morelli
  */
 
@@ -34,6 +35,12 @@ public class BarraSchede extends JTabbedPane {
     protected JScrollPane scroll;
     protected final PanelCarrello carrello;
 
+    /**
+     * il costruttore istanzia i vari cataloghi con l'apposita immagine e gli appositi attributi
+     * 
+     * @throws IOException 
+     */
+    
     public BarraSchede() throws IOException {
 
 //aggiunta Scarpe, Completi, Accessori, Carrello 
