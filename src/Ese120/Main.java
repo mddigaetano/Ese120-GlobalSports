@@ -28,7 +28,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JViewport;
 
 /**
- *questa classe implementa l'ActionListener ed il MouseListener
+ * questa classe implementa l'ActionListener ed il MouseListener
  * 
  * @author Amedeo
  */
@@ -43,9 +43,9 @@ public class Main implements ActionListener, MouseListener{
     public static void main(String[] args) throws IOException {
         gui = new FinestraPrincipale();
         
-        gui.setVisible(true);
         gui.setSize(530, 400);
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gui.setVisible(true);
     }
 
     /**
